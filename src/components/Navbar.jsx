@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoB from '../assets/logo-b.png';
@@ -6,11 +5,6 @@ import logoW from '../assets/nob.png';
 import iconImg from '../assets/icon.png';
 import { navLinks } from '../data';
 
-/**
- * Navbar component
- * Props:
- *   - variant: 'light' (home page with hero) | 'dark' (work/contact pages with strip)
- */
 function Navbar({ variant = 'light' }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -23,7 +17,6 @@ function Navbar({ variant = 'light' }) {
     <div className={variant === 'dark' ? 'strip' : ''}>
       <div className="container">
         <div className="header-main">
-          {/* Logo */}
           <div className={variant === 'dark' ? 'logo-w' : 'logo'}>
             <Link to="/">
               <img
@@ -33,14 +26,12 @@ function Navbar({ variant = 'light' }) {
             </Link>
           </div>
 
-          {/* Mobile hamburger icon */}
           <span className="menu" onClick={toggleMenu}>
             <img src={iconImg} alt="Menu" />
           </span>
 
           <div className="clear"></div>
 
-          {/* Navigation links */}
           <div className="header-right">
             <ul className={`res${menuOpen ? ' open' : ''}`}>
               {navLinks.map((link) => (

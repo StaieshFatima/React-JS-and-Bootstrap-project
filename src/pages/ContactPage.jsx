@@ -21,23 +21,23 @@ function ContactPage({ company = companyInfo }) {
 
   return (
     <>
-      {}
-      <div className="strip">
+  
+      
         <Navbar variant="dark" />
-      </div>
+    
 
-      {}
+   
       <div className="contact-us">
         <div className="container">
           <div className="contact-us-main">
 
-            {}
+          
             <div className="contact-us-top">
               <h3>CONTACT US</h3>
               <p>Get in Touch</p>
             </div>
 
-            {}
+          
             <div className="col-md-8 contact-us-left">
               <form onSubmit={handleSubmit}>
                 <input
@@ -69,7 +69,7 @@ function ContactPage({ company = companyInfo }) {
               </form>
             </div>
 
-            {}
+          
             <div className="col-md-4 contact-us-right">
               <h3>{company.heading}</h3>
               {company.lines.map((line, i) => (
@@ -90,7 +90,7 @@ function ContactPage({ company = companyInfo }) {
         </div>
       </div>
 
-      {}
+    
       <div className="map">
         <div className="container">
           <iframe

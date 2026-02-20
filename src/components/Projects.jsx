@@ -1,9 +1,7 @@
-// src/components/Projects.jsx
 import { useState } from 'react';
 import ProjectModal from './ProjectModal';
 import { projects } from '../data';
 
-// Import all project images statically so Vite bundles them
 import imgD from '../assets/D.jfif';
 import imgSea from '../assets/MOUNTAIN SERENITY.jfif';
 import imgWork from '../assets/work.jpg';
@@ -26,14 +24,6 @@ const imageMap = {
   cat: imgCat,
 };
 
-/**
- * ProjectCard component
- * Props:
- *   - project: project data object
- *   - imageMap: image lookup map
- *   - onOpen: function(project)
- */
-// Filter categories — each project can belong to one or more
 const FILTERS = ['ALL', 'LANDSCAPE', 'SEASCAPE', 'LIFE', 'AUTOMOTIVE', 'ANIMAL', 'ARCHITECTURE', 'STREET', 'COMMERCIAL'];
 
 function ProjectCard({ project, onOpen }) {
@@ -62,10 +52,7 @@ function ProjectCard({ project, onOpen }) {
     </div>
   );
 }
-/**
- * Projects component
- * Renders the main portfolio grid exactly matching the original HTML layout.
- */
+
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('ALL');
   const [activeProject, setActiveProject] = useState(null);
@@ -77,7 +64,7 @@ function Projects() {
   return (
     <div className="gallery-section">
 
-      {/* Filter buttons */}
+    
       <div className="gallery-filters">
         {FILTERS.map((f) => (
           <button
@@ -90,7 +77,7 @@ function Projects() {
         ))}
       </div>
 
-      {/* Uniform 3-column grid */}
+  
       <div className="gallery-grid">
         {filtered.map((project) => (
           <ProjectCard

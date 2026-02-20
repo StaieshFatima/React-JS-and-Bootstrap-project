@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { navLinks } from '../data';
@@ -18,7 +17,6 @@ function Footer() {
     <footer className="footer">
       <div className="container">
 
-        {/* ── Top row: brand | nav | back to top ── */}
         <div className="footer-top-inner">
 
           <div className="footer-logo">Graphica</div>
@@ -37,10 +35,8 @@ function Footer() {
 
         </div>
 
-        {/* ── Divider ── */}
         <div className="footer-divider"></div>
 
-        {/* ── Copyright ── */}
         <p className="footer-copyright">
           &copy; 2026 Graphica. All rights reserved. &nbsp;·&nbsp; Built with React &amp; Bootstrap
         </p>

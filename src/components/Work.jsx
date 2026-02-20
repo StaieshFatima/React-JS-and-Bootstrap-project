@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import { useEffect,useState } from 'react';
 import { projects } from '../data';
 
 import imgD      from '../assets/D.jfif';
@@ -28,6 +29,21 @@ const allCategories = ['ALL', ...new Set(projects.map((p) => p.category))];
 function Work() {
   const [activeFilter, setActiveFilter] = useState('ALL');
   const [modal, setModal] = useState(null);
+
+  useEffect(() => {
+    if (modal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [modal]);
+
+  useEffect(() => {
+    const handleKey = (e) => { if (e.key === 'Escape') setModal(null); };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, []);
 
   const filtered =
     activeFilter === 'ALL'

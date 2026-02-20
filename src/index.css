@@ -837,6 +837,72 @@ iframe {
   margin: 0 auto;
 }
 
+/* === TEAM SECTION === */
+.team-section {
+  margin-top: 5em;
+  padding-bottom: 3em;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  padding: 2.5em 1.5em;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.team-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #AB9797;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2em;
+}
+
+.team-name {
+  font-size: 1em;
+  font-weight: 700;
+  color: #231F20;
+  margin-bottom: 0.4em;
+  letter-spacing: 1px;
+}
+
+.team-role {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #AB9797;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+
 /* ===========================
    SKILLS PAGE
    =========================== */
@@ -930,6 +996,8 @@ iframe {
   letter-spacing: 1px;
   margin-top: 1em;
 }
+
+
 
 /* ===========================
    WORK PAGE
@@ -1146,6 +1214,8 @@ iframe {
   font-family: 'Roboto Slab',serif;
 }
 
+
+
 /* ===========================
    RESPONSIVE MEDIA QUERIES
    =========================== */
@@ -1312,5 +1382,157 @@ iframe {
   }
   .work-us { 
     padding: 1em 0px 1em 0px; 
+  }
+}
+
+.testimonials-section {
+  
+  padding: 5em 0 4em;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.testimonials-heading {
+  font-size: 2.2em;
+  font-weight: 700;
+  font-family: "Roboto Slab",serif;
+  color: #000;
+  margin-bottom: 1.5em;
+}
+
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 0 auto 1.5em;
+  max-width: 780px;
+  padding: 0 1em;
+}
+
+.testimonial-card {
+  flex: 1;
+
+  background: #231F20;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5em 2em;
+  text-align: center;
+}
+
+.testimonial-stars {
+  margin-bottom: 1em;
+}
+
+.star {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.star--filled {
+  color: #E6013C;
+}
+
+.testimonial-quote {
+  font-size: 1em;
+  font-weight: 300;
+  color: #ddd;
+  line-height: 1.8;
+  font-style: italic;
+  margin: 0 0 2em;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  text-align: left;
+}
+
+.testimonial-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #AB9797;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2em;
+}
+
+.testimonial-role {
+  font-size: 0.78em;
+  font-weight: 300;
+  color: #AB9797;
+}
+
+.testimonial-arrow {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #000;
+  font-size: 1.2em;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.testimonial-arrow:hover {
+  background: #E6013C;
+  border-color: #E6013C;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6em;
+  margin-top: 1.5em;
+}
+
+.testimonial-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.testimonial-dot--active {
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .testimonial-slider {
+    gap: 1em;
+  }
+
+  .testimonials-heading {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1em;
+  }
+
+  .testimonial-card {
+    padding: 1.5em 1em;
   }
 }

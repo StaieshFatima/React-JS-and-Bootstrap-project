@@ -3,6 +3,8 @@ export const navLinks = [
   { label: 'About',   path: '/about' },  
   { label: 'Skills',  path: '/skills' },  
   { label: 'Work', path: '/work' },
+    { label: 'Testimonials', path: '/testimonials' },
+
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -88,6 +90,27 @@ export const projects = [
   },
 ];
 
+
+export const teamMembers = [
+  {
+    id: 'team-1',
+    name: 'Fasih ud Din',
+    role: 'Lead Photographer',
+    initial: 'F',
+  },
+  {
+    id: 'team-2',
+    name: 'Fatima Maryam',
+    role: 'Photo Editor & Retoucher',
+    initial: 'F',
+  },
+  {
+    id: 'team-3',
+    name: 'Meerab Arshad',
+    role: 'Creative Director',
+    initial: 'M',
+  },
+];
 export const contactInfo = {
   name: 'Staiesh Fatima',
   address1: 'New York City, USA',
@@ -145,6 +168,36 @@ export const skills = [
   },
 ];
 
+export const testimonials = [
+  {
+    id: 'test-1',
+    name: 'Maryam Nawaz',
+    role: 'Wedding Client',
+    rating: 5,
+    quote: 'Staiesh captured every single emotion of our wedding day with such artistry. Absolutely beyond what we imagined.',
+  },
+  {
+    id: 'test-2',
+    name: 'Nawaz Sharif',
+    role: 'Commercial Director',
+    rating: 5,
+    quote: 'Our product campaign needed images that stopped people mid-scroll. Staiesh delivered exactly that.',
+  },
+  {
+    id: 'test-3',
+    name: 'Maria Memon',
+    role: 'Portrait Session Client',
+    rating: 5,
+    quote: 'I was nervous in front of the camera, but Staiesh made me feel completely at ease. Worth every penny.',
+  },
+  {
+    id: 'test-4',
+    name: 'Ali Khan',
+    role: 'Travel Magazine Editor',
+    rating: 5,
+    quote: 'Her landscape work graced our cover — and it sold out. Genuinely exceptional eye for light and composition.',
+  },
+];
 
 export const companyInfo = {
   heading: 'Graphica Office',

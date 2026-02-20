@@ -1,4 +1,6 @@
 import photo from '../assets/staiesh.jpg';
+import { teamMembers } from '../data';
+
 function About() {
   const stats = [
     { value: '3+',  label: 'YEARS EXPERIENCE' },
@@ -11,12 +13,14 @@ function About() {
     <div className="about-page">
       <div className="container">
 
+        {/* ── Section Heading ── */}
         <div className="about-section-header">
           <p className="about-section-tag">ABOUT ME</p>
           <h2 className="about-section-title">The Story Behind the Lens</h2>
           <span className="about-section-line"></span>
         </div>
 
+        {/* ── Bio Row ── */}
         <div className="about-page-inner row">
 
           <div className="col-md-5 about-photo-col">
@@ -55,6 +59,26 @@ function About() {
           </div>
 
         </div>
+
+        {/* ── Team Section ── */}
+        <div className="team-section">
+          <div className="about-section-header">
+            <p className="about-section-tag">OUR TEAM</p>
+            <h2 className="about-section-title">The People Behind the Lens</h2>
+            <span className="about-section-line"></span>
+          </div>
+
+          <div className="team-grid">
+            {teamMembers.map((member) => (
+              <div key={member.id} className="team-card">
+                <div className="team-avatar">{member.initial}</div>
+                <h3 className="team-name">{member.name}</h3>
+                <p className="team-role">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );
